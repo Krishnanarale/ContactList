@@ -1,0 +1,13 @@
+.list-group-item {
+    margin-bottom: 5px;
+}
+
+a {
+    cursor: pointer;
+    color: brown;
+    font-weight: bold;
+}
+
+h3 {
+    color: blueviolet;
+}
