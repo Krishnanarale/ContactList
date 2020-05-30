@@ -1,5 +1,23 @@
-<br>
-<div class="panel panel-primary" *ngFor="let contact of contacts">
-    <div class="panel-heading">{{ contact.first_name + ' ' + contact.last_name }}</div>
-    <div class="panel-body">{{ contact.phone }}</div>
+<h3>Details</h3>
+<hr>
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+                <label>First Name:</label>
+                <br>
+                <label>Last Name:</label>
+                <br>
+                <label>Contact Number:</label>
+            </div>
+            <div class="col-md-6">
+                <label>{{contact.first_name}}</label>
+                <br>
+                <label>{{contact.last_name}}</label>
+                <br>
+                <label>{{contact.phone}}</label>
+                <a type="button" class="btn btn-xs btn-warning pull-right" routerLink="edit">Edit</a>
+            </div>
+        </div>
+    </div>
 </div>

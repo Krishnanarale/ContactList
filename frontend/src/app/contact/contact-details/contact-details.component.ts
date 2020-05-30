@@ -12,14 +12,15 @@ import { Subscription } from 'rxjs';
 export class ContactDetailsComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription;
-  public contacts: Contact[] = [];
+  public contact: Contact;
+  private id: string;
 
-  constructor( private route: ActivatedRoute, private router: Router, private webService: WebService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private webService: WebService) { }
 
   ngOnInit(): void {
-    let id = this.route.snapshot.paramMap.get('id');
-    this.subscription = this.webService.getContact(id).subscribe(
-      (contact: Contact[]) => this.contacts = contact
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.subscription = this.webService.getContact(this.id).subscribe(
+      (contact: Contact[]) => this.contact = contact[0]
     )
   }
 

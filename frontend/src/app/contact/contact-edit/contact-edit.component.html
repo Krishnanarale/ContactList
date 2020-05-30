@@ -1,0 +1,19 @@
+<h3>Edit Contact</h3>
+<hr>
+<div class="panel panel-primary" *ngIf="contact">
+    <div class="panel-body">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" name="first_name" [ngModel]="contact.first_name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" name="last_name" [ngModel]="contact.last_name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Contact Number" name="phone" [ngModel]="contact.phone">
+            </div>
+            <button type="button" class="btn btn-danger pull-right" (click)="onDelete()">Delete</button>
+            <button type="submit" class="btn btn-primary pull-right">Submit</button>
+        </form>
+    </div>
+</div>
