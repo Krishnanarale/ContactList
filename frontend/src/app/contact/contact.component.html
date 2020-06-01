@@ -4,9 +4,10 @@
             <h3>List Of Contacts</h3>
             <hr>
             <ul class="list-group">
-                <a class="list-group-item" *ngFor="let contact of contacts" routerLinkActive="active" [routerLink]="contact._id"
-                    >{{ contact.first_name + " " + contact.last_name }} <span
-                        class="badge">{{ contact.phone }}</span></a>
+                <a class="list-group-item" *ngFor="let contact of contacts" routerLinkActive="active"
+                    [routerLink]="contact._id">{{ contact.first_name + " " + contact.last_name }} <span
+                        class="badge">{{ contact.phone }}</span>
+                </a>
             </ul>
             <a class="btn btn-success pull-right" routerLink="add" routerLinkActive="active">Add Contact</a>
         </div>
